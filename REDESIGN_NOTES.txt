@@ -1,0 +1,12 @@
+JINENDRA KALAKRITI — PREMIUM REDESIGN
+
+Main changes:
+- Cinematic autoplay, muted, looping hero video using the existing products/VID20261004175902.mp4 asset.
+- Refined botanical green, ivory, and muted gold editorial design.
+- Improved mobile layout and reduced-motion support.
+- Product image references now point to actual local files in products/ rather than nonexistent placeholder filenames.
+- Existing product prices and cart/checkout logic have not been changed.
+
+To preview: open index.html in a browser. Keep the products folder next to index.html.
+To deploy on GitHub Pages: replace the existing index.html with this one, keep the existing products folder intact, then commit/push.
+Note: existing checkout still uses the placeholder UPI ID YOURUPI@upi; configure your real UPI ID before accepting orders.
