@@ -75,6 +75,27 @@ window.PRODUCTS=[
 ]
 },
 {
+"slug": "box-style-brass-jain-pooja-thali-set",
+"name": "Box Style Brass Jain Pooja Thali Set",
+"cat": "Jain & Religious Décor",
+"price": 1990,
+"mrp": 2500,
+"unit": "",
+"desc": "Brass pooja set in a round lidded box engraved with Jain symbols and जय जिनेन्द्र. The box holds the pooja pieces shown in the photos: kalash cups, diya and lamp, spoons and small bowls.",
+"details": [
+"Size: 7 inch",
+"Solid brass, round lidded box",
+"Engraved with Jain symbols and जय जिनेन्द्र",
+"Includes the pooja pieces shown in the photos"
+],
+"tag": "New",
+"imgs": [
+"img/box-style-brass-jain-pooja-thali-set-1.jpg",
+"img/box-style-brass-jain-pooja-thali-set-2.jpg",
+"img/box-style-brass-jain-pooja-thali-set-3.jpg"
+]
+},
+{
 "slug": "om-hreem-arham-board",
 "name": "ॐ ह्रीं अर्हं असिआउसा नमः Board",
 "cat": "Jain & Religious Décor",
@@ -148,6 +169,60 @@ window.PRODUCTS=[
 "imgs": [
 "img/wooden-bhaktamabar-stotra-1.jpg",
 "img/wooden-bhaktamabar-stotra-2.jpg"
+]
+},
+{
+"slug": "car-dashboard-jain-idol-frame",
+"name": "Car Mahavir Bhagwan Frame",
+"cat": "Jain & Religious Décor",
+"price": 300,
+"mrp": 400,
+"unit": "",
+"desc": "Gold-finish relief frame of Mahavir Bhagwan with swastik symbols, set on a black base so it stands on a car dashboard.",
+"details": [
+"Gold-finish relief frame of Mahavir Bhagwan",
+"Swastik symbols",
+"Black base for a car dashboard or shelf"
+],
+"tag": "New",
+"imgs": [
+"img/car-dashboard-jain-idol-frame-1.jpg"
+]
+},
+{
+"slug": "navkar-mahamantra-framed-plaque",
+"name": "Namokar Mantra German Silver Frame",
+"cat": "Jain & Religious Décor",
+"price": 1000,
+"mrp": 1300,
+"unit": "",
+"desc": "German silver plate with the Namokar Mantra in Devanagari, set in a dark wood frame with gold detailing. Stands on a table or shelf.",
+"details": [
+"German silver plate with the full Namokar Mantra",
+"Dark wood frame with gold detailing",
+"Stands on a table or shelf"
+],
+"tag": "New",
+"imgs": [
+"img/navkar-mahamantra-framed-plaque-1.jpg"
+]
+},
+{
+"slug": "navkar-mantra-six-panel-wall-hanging",
+"name": "Namokar Mantra Wooden Hanging",
+"cat": "Jain & Religious Décor",
+"price": 400,
+"mrp": 550,
+"unit": "",
+"desc": "Wooden hanging with six colour-coded panels, one line of the Namokar Mantra on each, and Jain symbols on the top panel. Hangs from a rope on the wall.",
+"details": [
+"Wooden panels in red, yellow, white, green, blue and maroon",
+"One line of the Namokar Mantra on each panel",
+"Hangs from a rope"
+],
+"tag": "New",
+"imgs": [
+"img/navkar-mantra-six-panel-wall-hanging-1.jpg"
 ]
 },
 {
@@ -501,10 +576,206 @@ window.PRODUCTS=[
 "Resin frame",
 "Golden temple-style print of Laxmi, Ganesh and Saraswati"
 ],
-"tag": "Diwali pick",
+"tag": "Popular",
 "imgs": [
 "img/laxmi-ganesh-saraswati-photo-frame-1.jpg",
 "img/laxmi-ganesh-saraswati-photo-frame-2.jpg"
+]
+},
+{
+"slug": "peacock-photo-frame",
+"name": "Peacock Photo Frame",
+"cat": "Photo Frames",
+"price": 870,
+"mrp": 1100,
+"unit": "",
+"desc": "Photo frame with a pair of peacocks among flowers and glowing lights, in a dark frame.",
+"details": [
+"Size: 8 × 12 inch",
+"Pair of peacocks with flowers and lights",
+"Dark frame"
+],
+"tag": "New",
+"imgs": [
+"img/peacock-photo-frame-1.jpg"
+]
+},
+{
+"slug": "flower-vase-photo-frame",
+"name": "Flower Vase Photo Frame",
+"cat": "Photo Frames",
+"price": 870,
+"mrp": 1100,
+"unit": "",
+"desc": "Landscape photo frame with three ornate vases of purple, blue and orange flowers on a blue background, with a gold edge.",
+"details": [
+"Landscape frame",
+"Three ornate flower vases",
+"Gold edge"
+],
+"tag": "New",
+"imgs": [
+"img/flower-vase-photo-frame-1.jpg"
+]
+},
+{
+"slug": "birds-photo-frame",
+"name": "Birds Photo Frame",
+"cat": "Photo Frames",
+"price": 870,
+"mrp": 1100,
+"unit": "",
+"desc": "Photo frame with three sparrows on a blossom branch with pink flowers, in a black frame.",
+"details": [
+"Three sparrows on a blossom branch",
+"Black frame"
+],
+"tag": "New",
+"imgs": [
+"img/birds-photo-frame-1.jpg"
+]
+},
+{
+"slug": "you-are-my-favourite-photo-frame",
+"name": "You Are My Favourite Photo Frame",
+"cat": "Photo Frames",
+"price": 495,
+"mrp": 700,
+"unit": "",
+"desc": "Wooden photo frames with \"You are my favourite\" lettering on red and a hands-with-heart print, as shown in the photo.",
+"details": [
+"Wooden frame",
+"\"You are my favourite\" print",
+"Hands-with-heart print"
+],
+"tag": "New",
+"imgs": [
+"img/you-are-my-favourite-photo-frame-1.jpg"
+]
+},
+{
+"slug": "take-a-deep-breath-photo-frame",
+"name": "Take a Deep Breath & Restart Photo Frame",
+"cat": "Photo Frames",
+"price": 495,
+"mrp": 700,
+"unit": "",
+"desc": "Wooden photo frame with a print of a girl beside a yellow scooter and the words \"Take a deep breath and restart\".",
+"details": [
+"Wooden frame",
+"Girl and yellow scooter print",
+"\"Take a deep breath and restart\" lettering"
+],
+"tag": "New",
+"imgs": [
+"img/take-a-deep-breath-photo-frame-1.jpg"
+]
+},
+{
+"slug": "couple-illustration-photo-frame",
+"name": "Couple Illustration Photo Frame",
+"cat": "Photo Frames",
+"price": 495,
+"mrp": 700,
+"unit": "",
+"desc": "Photo frame with an illustration of a couple among pink flowers, in a thin wooden frame.",
+"details": [
+"Couple illustration with pink flowers",
+"Thin wooden frame"
+],
+"tag": "New",
+"imgs": [
+"img/couple-illustration-photo-frame-1.jpg"
+]
+},
+{
+"slug": "trust-the-timing-photo-frame",
+"name": "Trust the Timing Photo Frame",
+"cat": "Photo Frames",
+"price": 495,
+"mrp": 700,
+"unit": "",
+"desc": "Brown wooden photo frame with a mount, showing a girl with a bow holding sunflowers and the words \"Trust the timing.\"",
+"details": [
+"Brown wooden frame with mount",
+"Girl with sunflowers print",
+"\"Trust the timing.\" lettering"
+],
+"tag": "New",
+"imgs": [
+"img/trust-the-timing-photo-frame-1.jpg"
+]
+},
+{
+"slug": "forest-girl-photo-frame",
+"name": "Forest Girl Photo Frame",
+"cat": "Photo Frames",
+"price": 495,
+"mrp": 700,
+"unit": "",
+"desc": "Photo frame with a stitched-look picture of a girl with a basket of mushrooms, a puppy and butterflies in a forest, in a black frame.",
+"details": [
+"Girl, puppy and butterflies in a forest",
+"Black frame"
+],
+"tag": "New",
+"imgs": [
+"img/forest-girl-photo-frame-1.jpg"
+]
+},
+{
+"slug": "porsche-race-car-3-piece-frame-set",
+"name": "Porsche Race Car 3-Piece Frame Set",
+"cat": "Photo Frames",
+"price": 1500,
+"mrp": 2000,
+"unit": "",
+"desc": "Three light wooden frames that together show a Porsche race car on a red background. Hang them side by side as one picture.",
+"details": [
+"Three light wooden frames",
+"One race car picture across all three",
+"Red background"
+],
+"tag": "New",
+"imgs": [
+"img/porsche-race-car-3-piece-frame-set-1.jpg"
+]
+},
+{
+"slug": "sudha-sagar-maharaj-bhajan-fridge-magnet",
+"name": "Sudha Sagar Maharaj Ji Bhajan Fridge Magnet",
+"cat": "Fridge Magnets",
+"price": 640,
+"mrp": 850,
+"unit": "",
+"desc": "Fridge magnet with a print of Sudha Sagar Maharaj Ji, set in a clear acrylic frame, with customised music built in.",
+"details": [
+"Print of Sudha Sagar Maharaj Ji in a clear acrylic frame",
+"Music button with customised music",
+"Sticks to the fridge"
+],
+"tag": "New",
+"imgs": [
+"img/sudha-sagar-maharaj-bhajan-fridge-magnet-1.jpg"
+]
+},
+{
+"slug": "customizable-fridge-magnet",
+"name": "Customizable Fridge Magnet",
+"cat": "Fridge Magnets",
+"price": 695,
+"mrp": 900,
+"unit": "",
+"desc": "Fridge magnet with customised music, made to your requirement. After you order, message us on WhatsApp with the picture and music you want. The photo shows our Sudha Sagar Maharaj Ji magnet as a sample.",
+"details": [
+"Customizable to your requirement",
+"Customised music",
+"Sticks to the fridge",
+"Send your picture and music on WhatsApp after ordering"
+],
+"tag": "Custom",
+"imgs": [
+"img/customizable-fridge-magnet-1.jpg"
 ]
 },
 {
@@ -542,6 +813,93 @@ window.PRODUCTS=[
 "imgs": [
 "img/3d-cute-krishna-1.jpg",
 "img/3d-cute-krishna-2.jpg"
+]
+},
+{
+"slug": "f1-2027-race-calendar-wall-board",
+"name": "F1 2027 Race Calendar Wall Board",
+"cat": "3D Art",
+"price": 1270,
+"mrp": 1700,
+"unit": "",
+"desc": "Wall board showing 24 race circuit outlines with country names and dates, around an F1 2027 logo. Orange raised outlines and border on a black base, with small stands.",
+"details": [
+"24 circuit outlines with country names and dates",
+"Orange outlines and border on a black base",
+"Small stands shown in the photo"
+],
+"tag": "New",
+"imgs": [
+"img/f1-2027-race-calendar-wall-board-1.jpg"
+]
+},
+{
+"slug": "flexi-sleeping-cat-toy",
+"name": "Flexi Sleeping Cat Toy",
+"cat": "3D Art",
+"price": 170,
+"mrp": 270,
+"unit": "",
+"desc": "Small sleeping cat with a bendy jointed body. Photo shows white and grey.",
+"details": [
+"Bendy jointed body",
+"Colours shown: white and grey"
+],
+"tag": "New",
+"imgs": [
+"img/flexi-sleeping-cat-toy-1.jpg"
+]
+},
+{
+"slug": "flexi-fox-keychain",
+"name": "Flexi Fox Keychain",
+"cat": "3D Art",
+"price": 220,
+"mrp": 350,
+"unit": "",
+"desc": "Cute white fox keychain with a jointed body, pink ears and paw details, with a metal chain ring.",
+"details": [
+"Jointed body that bends",
+"Pink ears and paw details",
+"Metal chain ring"
+],
+"tag": "New",
+"imgs": [
+"img/flexi-fox-keychain-1.jpg"
+]
+},
+{
+"slug": "butterfly-earrings",
+"name": "Butterfly Earrings",
+"cat": "Earrings",
+"price": 50,
+"mrp": null,
+"unit": "",
+"desc": "Black cut-out butterfly earrings with gold-tone hooks.",
+"details": [
+"Black butterfly cut-out design",
+"Gold-tone hooks"
+],
+"tag": "New",
+"imgs": [
+"img/butterfly-earrings-1.jpg"
+]
+},
+{
+"slug": "flower-earrings",
+"name": "Flower Earrings",
+"cat": "Earrings",
+"price": 80,
+"mrp": null,
+"unit": "",
+"desc": "Blue five-petal flower earrings with yellow centres and silver-tone hooks.",
+"details": [
+"Blue flowers with yellow centres",
+"Silver-tone hooks"
+],
+"tag": "New",
+"imgs": [
+"img/flower-earrings-1.jpg"
 ]
 },
 {
@@ -656,6 +1014,159 @@ window.PRODUCTS=[
 "imgs": [
 "img/saraswati-mata-wall-art-1.jpg",
 "img/saraswati-mata-wall-art-2.jpg"
+]
+},
+{
+"slug": "kamdhenu-cow-calf-marble-powder-idol",
+"name": "Kamdhenu Cow & Calf Marble Powder Idol",
+"cat": "Marble Powder Idols",
+"price": 1340,
+"mrp": 1800,
+"unit": "",
+"desc": "White cow with her calf on an oval base, finished with gold detailing on the horns, jewellery and hooves. Made from marble powder with natural colours, and 100% bone-meal free.",
+"details": [
+"Made from marble powder",
+"100% bone-meal free",
+"Natural colours used",
+"Cow and calf on an oval base",
+"Gold detailing"
+],
+"tag": "New",
+"mp": true,
+"imgs": [
+"img/kamdhenu-cow-calf-marble-powder-idol-1.jpg"
+]
+},
+{
+"slug": "marble-powder-elephant-pair",
+"name": "Marble Powder Elephant Pair",
+"cat": "Marble Powder Idols",
+"price": 2150,
+"mrp": 3000,
+"unit": "",
+"desc": "Pair of white elephants with trunks raised, carved blankets, pink ears and trunk detailing and gold anklets. Made from marble powder with natural colours, and 100% bone-meal free.",
+"details": [
+"Made from marble powder",
+"100% bone-meal free",
+"Natural colours used",
+"Pair of elephants",
+"Carved blankets with gold anklets"
+],
+"tag": "New",
+"mp": true,
+"imgs": [
+"img/marble-powder-elephant-pair-1.jpg"
+]
+},
+{
+"slug": "marble-powder-ram-idol-with-bow",
+"name": "Marble Powder Ram Idol with Bow",
+"cat": "Marble Powder Idols",
+"price": 5900,
+"mrp": 7000,
+"unit": "",
+"desc": "White Ram idol in an archer pose with a gold-finish bow, arrow and quiver, on a flat white base. Made from marble powder with natural colours, and 100% bone-meal free.",
+"details": [
+"Made from marble powder",
+"100% bone-meal free",
+"Natural colours used",
+"Archer pose with gold-finish bow, arrow and quiver",
+"Flat white base"
+],
+"tag": "New",
+"mp": true,
+"imgs": [
+"img/marble-powder-ram-idol-with-bow-1.jpg"
+]
+},
+{
+"slug": "ribbed-lidded-trinket-box-with-tray",
+"name": "Ribbed Lidded Trinket Box with Tray",
+"cat": "Home Décor",
+"price": 570,
+"mrp": 850,
+"unit": "",
+"desc": "White ribbed trinket box with a decorative lid and scalloped rim, on a matching oval tray. Good for jewellery and small keepsakes.",
+"details": [
+"Ribbed box with decorative lid",
+"Matching oval tray",
+"For jewellery and small keepsakes"
+],
+"tag": "New",
+"imgs": [
+"img/ribbed-lidded-trinket-box-with-tray-1.jpg"
+]
+},
+{
+"slug": "bubble-edge-round-tray",
+"name": "Bubble Edge Round Tray",
+"cat": "Home Décor",
+"price": 370,
+"mrp": 500,
+"unit": "",
+"desc": "Round white tray with a bubble-style raised edge. Use it for jewellery, perfume or small décor.",
+"details": [
+"Round tray with bubble-style edge",
+"White matte finish",
+"For jewellery, perfume or small décor"
+],
+"tag": "New",
+"imgs": [
+"img/bubble-edge-round-tray-1.jpg"
+]
+},
+{
+"slug": "meditating-buddha-statue-white",
+"name": "Meditating Buddha Statue (White)",
+"cat": "Home Décor",
+"price": 8700,
+"mrp": 11000,
+"unit": "",
+"desc": "Seated white Buddha statue in a meditation pose, with a raised right hand, left hand resting in the lap and a textured topknot.",
+"details": [
+"Seated meditation pose",
+"Glossy white finish",
+"Raised right hand"
+],
+"tag": "New",
+"imgs": [
+"img/meditating-buddha-statue-white-1.jpg"
+]
+},
+{
+"slug": "pause-dish",
+"name": "Pause Dish with Heart",
+"cat": "Home Décor",
+"price": 345,
+"mrp": 475,
+"unit": "",
+"desc": "Small round off-white dish with \"PAUSE.\" lettering and a little red heart. Use it for jewellery, rings or small keepsakes.",
+"details": [
+"Off-white dish with \"PAUSE.\" and a red heart",
+"For jewellery, rings or small keepsakes",
+"Photo shows two dishes"
+],
+"tag": "New",
+"imgs": [
+"img/pause-dish-1.jpg"
+]
+},
+{
+"slug": "good-day-toast-shaped-plate",
+"name": "Good Day Toast Shaped Plate",
+"cat": "Home Décor",
+"price": 475,
+"mrp": 650,
+"unit": "",
+"desc": "White plate shaped like a slice of bread, with a brown edge and \"Good Day!\" embossed on it.",
+"details": [
+"Bread-slice shape with brown edge",
+"\"Good Day!\" embossed lettering",
+"For toast, snacks or desserts"
+],
+"tag": "New",
+"imgs": [
+"img/good-day-toast-shaped-plate-1.jpg"
 ]
 },
 {

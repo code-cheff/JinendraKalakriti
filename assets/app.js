@@ -5,7 +5,7 @@ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelect
 const money=n=>'₹'+Number(n).toLocaleString('en-IN');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const bySlug=Object.fromEntries(P.map(p=>[p.slug,p]));
-const CATS=['Torans','Pooja Jodi Sets','Jain & Religious Décor','Festive Hangings & Candles','Rangoli','Charan & Swastik Décor','Photo Frames','Marble Wall Art','3D Art','Stationery'];
+const CATS=['Torans','Pooja Jodi Sets','Jain & Religious Décor','Festive Hangings & Candles','Rangoli','Charan & Swastik Décor','Photo Frames','Fridge Magnets','Marble Wall Art','Marble Powder Idols','Home Décor','3D Art','Earrings','Stationery'];
 P.forEach(p=>{p.ask=!p.price; p.save=(p.mrp&&p.price)?p.mrp-p.price:0; p.pct=p.save?Math.round(p.save/p.mrp*100):0;});
 const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 
@@ -14,7 +14,7 @@ let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on
 
 /* ---------- whatsapp ---------- */
 const wa=text=>`https://wa.me/${S.whatsapp}?text=${encodeURIComponent(text)}`;
-const url=p=>`${S.domain}/#/product/${p.slug}`;
+const url=p=>`${S.domain}/p/${p.slug}/`;
 function enquireLink(p){return wa(`Hello ${S.name}! I would like to enquire about:\n\n${p.name}\n${url(p)}\n\nPlease share the price and details${p.cat==='Marble Wall Art'?' (size / design / customization)':''}.`)}
 
 /* ---------- product cards ---------- */
@@ -22,12 +22,13 @@ function priceHTML(p){
   if(p.ask)return `<div class="price ask">Contact us for price</div>`;
   return `<div class="price">${money(p.price)}${p.mrp?`<s>${money(p.mrp)}</s>`:''}${p.unit?`<small>${esc(p.unit)}</small>`:''}</div>`;
 }
+const MPC='Marble Powder Idols';
 function cardHTML(p){
   const i2=p.imgs[1]?`<img src="${p.imgs[1]}" alt="" loading="lazy">`:'';
-  return `<article class="card"><a class="cardImg" href="#/product/${p.slug}" aria-label="${esc(p.name)}">
+  return `<article class="card"><a class="cardImg" href="p/${p.slug}/" aria-label="${esc(p.name)}">
   ${p.pct?`<span class="off">SAVE ${p.pct}%</span>`:''}${p.tag&&!p.pct?`<span class="tag">${esc(p.tag)}</span>`:''}
   <img src="${p.imgs[0]}" alt="${esc(p.name)}" loading="lazy" width="400" height="400">${i2}</a>
-  <div class="cardBody"><div class="meta">${esc(p.cat)}</div><h3><a href="#/product/${p.slug}">${esc(p.name)}</a></h3>
+  <div class="cardBody"><div class="meta">${esc(p.cat)}</div>${p.mp?'<div class="mpBadge">✓ Marble powder · Bone-meal free</div>':''}<h3><a href="p/${p.slug}/">${esc(p.name)}</a></h3>
   <div class="priceRow">${priceHTML(p)}${p.ask?`<a class="enq" href="${enquireLink(p)}" target="_blank" rel="noopener">Enquire</a>`:`<button class="add" data-add="${p.slug}" aria-label="Add ${esc(p.name)} to cart">+</button>`}</div></div></article>`;
 }
 
@@ -45,6 +46,7 @@ function renderGrid(){
   if(F.sort==='high')l=[...l].sort((a,b)=>(a.ask?-1:0)-(b.ask?-1:0)||key(b)-key(a));
   if(F.sort==='name')l=[...l].sort((a,b)=>a.name.localeCompare(b.name));
   $('#grid').innerHTML=l.length?l.map(cardHTML).join(''):`<div class="empty">No products match your search. <a href="${wa('Hello! I am looking for: '+F.q)}" target="_blank" rel="noopener" style="text-decoration:underline;color:var(--green)">Ask us on WhatsApp</a>.</div>`;
+  $('#mpBanner').hidden=F.cat!==MPC;
   $('#count').textContent=`Showing ${l.length} of ${P.length} products`;
   renderChips();
 }
@@ -67,7 +69,7 @@ function renderCart(){
   const b=$('#cartBody');
   if(!cart.length){b.innerHTML='<div class="empty">Your cart is empty.<br><br><a class="btn ghost" href="#/shop" data-closecart>Browse the collection</a></div>';$('#checkoutBtn').disabled=true;return}
   $('#checkoutBtn').disabled=false;
-  b.innerHTML=cart.map(x=>{const p=bySlug[x.slug];return `<div class="cartItem"><img src="${p.imgs[0]}" alt="${esc(p.name)}"><div><b><a href="#/product/${p.slug}" data-closecart>${esc(p.name)}</a></b><div class="meta">${money(p.price)}${p.unit?' '+esc(p.unit):''}</div><div class="qty"><button data-q="${p.slug}" data-d="-1" aria-label="Decrease">−</button><span>${x.qty}</span><button data-q="${p.slug}" data-d="1" aria-label="Increase">+</button><button class="rm" data-rm="${p.slug}">Remove</button></div></div><b>${money(p.price*x.qty)}</b></div>`}).join('');
+  b.innerHTML=cart.map(x=>{const p=bySlug[x.slug];return `<div class="cartItem"><img src="${p.imgs[0]}" alt="${esc(p.name)}"><div><b><a href="p/${p.slug}/" data-closecart>${esc(p.name)}</a></b><div class="meta">${money(p.price)}${p.unit?' '+esc(p.unit):''}</div><div class="qty"><button data-q="${p.slug}" data-d="-1" aria-label="Decrease">−</button><span>${x.qty}</span><button data-q="${p.slug}" data-d="1" aria-label="Increase">+</button><button class="rm" data-rm="${p.slug}">Remove</button></div></div><b>${money(p.price*x.qty)}</b></div>`}).join('');
 }
 function openCart(){$('#drawer').classList.add('open');$('#overlay').classList.add('on')}
 function closeCart(){$('#drawer').classList.remove('open');$('#overlay').classList.remove('on')}
@@ -131,9 +133,11 @@ function route(){
   const h=decodeURIComponent(location.hash.replace(/^#\/?/,''));
   const [a,b]=h.split('/');
   $('#ld')?.remove();
-  if(a==='product'&&bySlug[b]){show('product');renderProduct(bySlug[b]);window.scrollTo(0,0);return}
+  const PS=document.body.dataset.product;
+  if(PS&&bySlug[PS]&&!a){show('product');renderProduct(bySlug[PS]);return}
+  if(a==='product'&&bySlug[b]){location.replace('/p/'+b+'/');return}
   if(a==='page'&&PAGES[b]){show('page');renderPage(b);window.scrollTo(0,0);return}
-  show('home');setMeta(HOME_TITLE,HOME_DESC,'img/om-arham-toran-1.jpg');
+  show('home');setMeta(HOME_TITLE,HOME_DESC,'img/logo-full.jpg');
   if(a==='category'&&b){F.cat=(CATS.includes(b)||(SALE&&b==='On Sale'))?b:'All';renderGrid()}
   const id=(a==='category')?'shop':a;
   const el=id&&document.getElementById(id);
@@ -141,9 +145,9 @@ function route(){
 }
 
 /* ---------- product page ---------- */
-let pvQty=1;
+let pvQty=1,curSlug='';
 function renderProduct(p){
-  pvQty=1;
+  pvQty=1;curSlug=p.slug;
   const rel=[...P.filter(x=>x.cat===p.cat&&x!==p),...P.filter(x=>x.cat!==p.cat)].slice(0,4);
   const thumbs=p.imgs.length>1?`<div class="thumbs">${p.imgs.map((s,i)=>`<button data-th="${i}" class="${i?'':'on'}" aria-label="Photo ${i+1}"><img src="${s}" alt=""></button>`).join('')}</div>`:'';
   const buy=p.ask?`<div class="buy"><a class="btn wa" target="_blank" rel="noopener" href="${enquireLink(p)}">Enquire on WhatsApp for price</a></div><p class="note">This piece is made to order. Tell us the size and design you want and we will share the price.</p>`:
@@ -154,6 +158,7 @@ function renderProduct(p){
   <div><div class="eyebrow">${esc(p.cat)}</div><h1>${esc(p.name)}</h1>
   <div class="pvPrice">${p.ask?`<span class="ask">Contact us for price</span>`:`<b>${money(p.price)}</b>${p.unit?`<span class="meta">${esc(p.unit)}</span>`:''}${p.mrp?`<s>${money(p.mrp)}</s><span class="save">SAVE ${money(p.save)}</span>`:''}`}</div>
   ${p.ask?'':'<div class="tax">Delivery charges, if any, are confirmed on WhatsApp before you pay.</div>'}
+  ${p.mp?`<div class="mpBox"><b>Pure and Jain-friendly</b><span>✓ Made from marble powder</span><span>✓ 100% bone-meal free</span><span>✓ Natural colours used</span></div>`:''}
   <p class="desc">${esc(p.desc)}</p>
   <h4>Highlights</h4><ul>${p.details.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>
   ${buy}
@@ -183,7 +188,7 @@ function renderPage(k){
 /* ---------- hero slideshow ---------- */
 function initHero(){
   const picks=['om-arham-toran','kalash-rangoli','laxmi-ganesh-saraswati-photo-frame','rainbow-ombre-pooja-jodi'].map(s=>bySlug[s]);
-  $('#slides').innerHTML=picks.map((p,i)=>`<a href="#/product/${p.slug}" class="${i?'':'on'}"><img src="${p.imgs[0]}" alt="${esc(p.name)}" ${i?'loading="lazy"':''}><figcaption><b>${esc(p.name)}</b>${p.price?'From '+money(p.price):'Made to order'}</figcaption></a>`).join('');
+  $('#slides').innerHTML=picks.map((p,i)=>`<a href="p/${p.slug}/" class="${i?'':'on'}"><img src="${p.imgs[0]}" alt="${esc(p.name)}" ${i?'loading="lazy"':''}><figcaption><b>${esc(p.name)}</b>${p.price?'From '+money(p.price):'Made to order'}</figcaption></a>`).join('');
   let i=0;const els=$$('#slides a');
   if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(()=>{els[i].classList.remove('on');i=(i+1)%els.length;els[i].classList.add('on')},4200);
 }
@@ -199,8 +204,8 @@ document.addEventListener('click',e=>{
   else if(t.dataset.th!==undefined){$('#mainPic').src=t.querySelector('img').src;$$('.thumbs button').forEach(b=>b.classList.toggle('on',b===t))}
   else if(t.dataset.pq){pvQty=Math.max(1,Math.min(99,pvQty+ +t.dataset.pq));$('#pvq').textContent=pvQty}
   else if(t.dataset.closecart!==undefined){closeCart()}
-  else if(t.id==='pvAdd'){addToCart(location.hash.split('/')[2],pvQty)}
-  else if(t.id==='pvBuy'){addToCart(location.hash.split('/')[2],pvQty,false);openCheckout()}
+  else if(t.id==='pvAdd'){addToCart(curSlug,pvQty)}
+  else if(t.id==='pvBuy'){addToCart(curSlug,pvQty,false);openCheckout()}
   else if(t.id==='copyLink'){navigator.clipboard?.writeText(location.href).then(()=>toast('Link copied'),()=>toast('Copy the link from the address bar'))}
   else if(t.id==='mainImg'){$('#lbImg').src=$('#mainPic').src;$('#lightbox').classList.add('open')}
   else if(t.classList.contains('menu')){$('#mobileNav').classList.toggle('open')}
@@ -222,6 +227,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeCh
 window.addEventListener('hashchange',route);
 
 /* ---------- init ---------- */
+$('#heroCount').textContent=P.length;
 $('#year').textContent=new Date().getFullYear();
 $$('[data-wa]').forEach(a=>{a.href=wa('Hello Jinendra Kalakriti!');a.target='_blank';a.rel='noopener'});
 $$('[data-ig]').forEach(a=>{a.href='https://instagram.com/'+S.instagram;a.target='_blank';a.rel='noopener'});

@@ -16,5 +16,5 @@ window.STORE = {
   upiName: 'Jinendra Kalakriti',
 
   /* Sale banner. Set on:false to hide all sale branding. endText is optional, e.g. 'Ends 5 Nov'. */
-  sale: { on: true, name: 'Diwali Sale', endText: '' },
+  sale: { on: false, name: 'Diwali Sale', endText: '' },
 };
